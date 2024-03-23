@@ -5,6 +5,7 @@ from PIL import Image
 import gradio as gr
 from gradio.components import Chatbot
 import agentscope
+from ChaosPlan import ChaosPlan
 from agentscope.agents import DialogAgent
 from agentscope.agents.user_agent import UserAgent
 from agentscope.message import Msg
@@ -61,7 +62,7 @@ model_configs = [
         "model_type": "dashscope_chat",
         "config_name": "qwen1.5-72b-chat",
         "model_name": "qwen1.5-72b-chat",
-        "api_key": "sk-69094d3516b149a78104652e924f6706",
+        "api_key": os.environ.get("DASHSCOPE_API_KEY"),
         "generate_args": {
             "temperature": 0.5,
         },

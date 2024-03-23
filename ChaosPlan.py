@@ -41,24 +41,26 @@ class ChaosPlan:
 
 
     def generate_pod_name(self):
-        # 设置 Kubernetes 连接配置
-        configuration = client.Configuration()
-        configuration.host = "https://"+self.k8s_api_url
-        configuration.verify_ssl = False
-        configuration.debug = False
-        configuration.api_key['authorization'] = f'Bearer {self.k8s_token}'
-        client.Configuration.set_default(configuration)
+        if self.k8s_api_url != '':
+            # 设置 Kubernetes 连接配置
+            configuration = client.Configuration()
+            configuration.host = "https://" + self.k8s_api_url
+            configuration.verify_ssl = False
+            configuration.debug = False
+            configuration.api_key['authorization'] = f'Bearer {self.k8s_token}'
+            client.Configuration.set_default(configuration)
 
-        # 创建 Kubernetes API 实例
-        v1 = client.CoreV1Api()
-        pod_list = v1.list_namespaced_pod(
-            namespace=self.namespace_name,
-            label_selector=f"app={self.app_name}"
-        )
-        if len(pod_list.items) > 0:
-            self.pod_name = pod_list.items[0].metadata.name
-        else:
-            self.pod_name = None
+            # 创建 Kubernetes API 实例
+            v1 = client.CoreV1Api()
+            pod_list = v1.list_namespaced_pod(
+                namespace=self.namespace_name,
+                label_selector=f"app={self.app_name}"
+            )
+            if len(pod_list.items) > 0:
+                self.pod_name = pod_list.items[0].metadata.name
+            else:
+                self.pod_name = None
+
 
     def generate_chaosblade_resource(self):
         # 生成一个唯一标识符 (UID)
