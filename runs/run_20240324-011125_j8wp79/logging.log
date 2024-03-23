@@ -1,0 +1,13 @@
+2024-03-24 01:11:25.934 | INFO     | agentscope.models:read_model_configs:171 - Load configs for model wrapper: qwen1.5-72b-chat
+2024-03-24 01:11:25.946 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-24 01:11:25.946 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-24 01:11:25.946 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs\run_20240324-011125_j8wp79\agentscope.db]
+2024-03-24 01:11:25.950 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:11:25.951 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.call_counter] to SqliteMonitor with unit [times] and quota [None]
+2024-03-24 01:11:25.954 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-24 01:11:25.966 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-24 01:11:25.972 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-24 01:11:25.981 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:11:25.983 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:11:25.983 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:11:25.983 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]

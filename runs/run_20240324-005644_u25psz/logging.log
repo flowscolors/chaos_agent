@@ -1,0 +1,271 @@
+2024-03-24 00:56:45.390 | INFO     | agentscope.models:read_model_configs:138 - Load configs for model wrapper: qwen1.5-72b-chat
+2024-03-24 00:56:45.401 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-24 00:56:45.401 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-24 00:56:45.401 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs\run_20240324-005644_u25psz\agentscope.db]
+2024-03-24 00:56:45.408 | WARNING  | agentscope.models:_get_model_wrapper:57 - Unsupported model_type [dashscope_chat],use PostApiModelWrapper instead.
+2024-03-24 00:56:45.408 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.409 | ERROR    | agentscope.utils.logging_utils:write:34 - Traceback (most recent call last):
+
+2024-03-24 00:56:45.409 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.409 | ERROR    | agentscope.utils.logging_utils:write:34 -   File "F:\project\chaos_agent\app_gradio.py", line 76, in <module>
+
+2024-03-24 00:56:45.410 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.410 | ERROR    | agentscope.utils.logging_utils:write:34 -     
+2024-03-24 00:56:45.410 | ERROR    | agentscope.utils.logging_utils:write:34 - commander_agent = DialogAgent(
+2024-03-24 00:56:45.410 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.410 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.411 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.411 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.411 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.411 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.412 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.412 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.412 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.412 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.413 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.414 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.414 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.414 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.414 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.415 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.415 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.415 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.415 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.416 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.416 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.416 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.417 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.417 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.417 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.417 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.417 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.419 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.419 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.420 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.420 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.420 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.421 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.421 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.421 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.422 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.422 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.422 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.423 | ERROR    | agentscope.utils.logging_utils:write:34 -   File "D:\codelib\anaconda3\envs\chatglm2-6b\Lib\site-packages\agentscope\agents\agent.py", line 21, in __call__
+
+2024-03-24 00:56:45.428 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.429 | ERROR    | agentscope.utils.logging_utils:write:34 -     
+2024-03-24 00:56:45.429 | ERROR    | agentscope.utils.logging_utils:write:34 - instance = super().__call__(*args, **kwargs)
+2024-03-24 00:56:45.429 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.430 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.431 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.431 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.431 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.431 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.432 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.432 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.433 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.433 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.433 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.434 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.434 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.434 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.435 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.435 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.435 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.436 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.436 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.436 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.437 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.437 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.438 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.438 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.438 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.439 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.439 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.439 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.439 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.440 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.440 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.441 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.441 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.441 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.442 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.442 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.442 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.443 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.443 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.443 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.444 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.444 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.444 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.445 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.445 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.445 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.446 | ERROR    | agentscope.utils.logging_utils:write:34 -   File "D:\codelib\anaconda3\envs\chatglm2-6b\Lib\site-packages\agentscope\agents\dialog_agent.py", line 44, in __init__
+
+2024-03-24 00:56:45.451 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.451 | ERROR    | agentscope.utils.logging_utils:write:34 -     
+2024-03-24 00:56:45.452 | ERROR    | agentscope.utils.logging_utils:write:34 - super().__init__(
+2024-03-24 00:56:45.452 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.452 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.453 | ERROR    | agentscope.utils.logging_utils:write:34 -   File "D:\codelib\anaconda3\envs\chatglm2-6b\Lib\site-packages\agentscope\agents\agent.py", line 68, in __init__
+
+2024-03-24 00:56:45.453 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.453 | ERROR    | agentscope.utils.logging_utils:write:34 -     
+2024-03-24 00:56:45.454 | ERROR    | agentscope.utils.logging_utils:write:34 - self.model = load_model_by_config_name(model_config_name)
+2024-03-24 00:56:45.454 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.454 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.454 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.454 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.454 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.455 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.455 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.455 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.455 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.456 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.456 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.456 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.457 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.457 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.457 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.458 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.458 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.458 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.458 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.459 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.459 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.459 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.460 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.460 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.460 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.462 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.462 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.462 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.462 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.463 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.463 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.464 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.464 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.464 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.465 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.465 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.465 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.466 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.466 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.466 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.467 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.467 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.467 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.468 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.468 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.469 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.470 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.470 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.470 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.470 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.471 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.471 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.472 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.472 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.472 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.472 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.473 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.474 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.474 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.474 | ERROR    | agentscope.utils.logging_utils:write:34 -   File "D:\codelib\anaconda3\envs\chatglm2-6b\Lib\site-packages\agentscope\models\__init__.py", line 85, in load_model_by_config_name
+
+2024-03-24 00:56:45.474 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.475 | ERROR    | agentscope.utils.logging_utils:write:34 -     
+2024-03-24 00:56:45.475 | ERROR    | agentscope.utils.logging_utils:write:34 - return _get_model_wrapper(model_type=model_type)(**config)
+2024-03-24 00:56:45.475 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.476 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.476 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.476 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.476 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.478 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.478 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.478 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.478 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.479 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.479 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.479 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.480 | ERROR    | agentscope.utils.logging_utils:write:34 -  
+2024-03-24 00:56:45.480 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.480 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.480 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.481 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.481 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.481 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.482 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.482 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.482 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.482 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.482 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.482 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.484 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.484 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.484 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.485 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.485 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.486 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.486 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.486 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.486 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.487 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.487 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.487 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.487 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.488 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.488 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.488 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.489 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.489 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.489 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.489 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.491 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.491 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.491 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.492 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.492 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.492 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.492 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.493 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.493 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.493 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.494 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.494 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.494 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.494 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.496 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.496 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.496 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.497 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.497 | ERROR    | agentscope.utils.logging_utils:write:34 - ^
+2024-03-24 00:56:45.497 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
+2024-03-24 00:56:45.498 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+2024-03-24 00:56:45.498 | ERROR    | agentscope.utils.logging_utils:write:34 - TypeError
+2024-03-24 00:56:45.498 | ERROR    | agentscope.utils.logging_utils:write:34 - : 
+2024-03-24 00:56:45.499 | ERROR    | agentscope.utils.logging_utils:write:34 - PostAPIModelWrapperBase.__init__() missing 1 required positional argument: 'api_url'
+2024-03-24 00:56:45.499 | ERROR    | agentscope.utils.logging_utils:write:34 - 
+
