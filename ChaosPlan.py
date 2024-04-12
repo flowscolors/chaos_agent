@@ -44,7 +44,7 @@ class ChaosPlan:
         if self.k8s_api_url != '':
             # 设置 Kubernetes 连接配置
             configuration = client.Configuration()
-            configuration.host = "https://" + self.k8s_api_url
+            configuration.host = self.k8s_api_url
             configuration.verify_ssl = False
             configuration.debug = False
             configuration.api_key['authorization'] = f'Bearer {self.k8s_token}'

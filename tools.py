@@ -12,7 +12,8 @@ def check_connectivity(k8s_api_url, k8s_token, prometheus_url):
     try:
         # 设置 Kubernetes 连接配置
         configuration = client.Configuration()
-        configuration.host = "https://"+k8s_api_url
+        #configuration.host = "https://"+k8s_api_url
+        configuration.host = k8s_api_url
         configuration.verify_ssl = False
         configuration.debug = False
         configuration.api_key['authorization'] = f'Bearer {k8s_token}'
@@ -27,7 +28,8 @@ def check_connectivity(k8s_api_url, k8s_token, prometheus_url):
             k8s_connected = False
 
         # 检测 Prometheus 地址的联通性
-        response = requests.get("http://"+prometheus_url, timeout=5)
+        # response = requests.get("http://"+prometheus_url, timeout=5)
+        response = requests.get(prometheus_url, timeout=5)
         if response.status_code == 200:
             prometheus_connected = True
         else:
@@ -44,7 +46,7 @@ def create_chaos_cr(k8s_api_url, k8s_token, chaosblade_resource):
     try:
         # 设置 Kubernetes 连接配置
         configuration = client.Configuration()
-        configuration.host = "https://"+k8s_api_url
+        configuration.host = k8s_api_url
         configuration.verify_ssl = False
         configuration.debug = False
         configuration.api_key['authorization'] = f'Bearer {k8s_token}'
@@ -74,7 +76,7 @@ def create_chaos_cr(k8s_api_url, k8s_token, chaosblade_resource):
 def query_prometheus(prometheus_url, prometheus_query):
     try:
         # 构建 Prometheus 查询 URL
-        query_url = f"http://{prometheus_url}/api/v1/query"
+        query_url = f"{prometheus_url}/api/v1/query"
 
         # 设置查询参数
         params = {"query": prometheus_query}
@@ -95,11 +97,11 @@ def query_prometheus(prometheus_url, prometheus_query):
         return None
 
 # 删除混沌故障的 CR 方法
-def delete_chaos_cr(k8s_api_url, k8s_token, chaos_blade_name):
+def delete_chaos_cr(k8s_api_url, k8s_token, chaosblade_resource):
     try:
         # 设置 Kubernetes 连接配置
         configuration = client.Configuration()
-        configuration.host = "https://"+k8s_api_url
+        configuration.host = k8s_api_url
         configuration.verify_ssl = False
         configuration.debug = False
         configuration.api_key['authorization'] = f'Bearer {k8s_token}'
@@ -107,6 +109,11 @@ def delete_chaos_cr(k8s_api_url, k8s_token, chaos_blade_name):
 
         # 创建 Kubernetes API 实例
         api_instance = client.CustomObjectsApi()
+
+        # 解析 YAML 格式的 ChaosBlade 资源
+        chaos_blade = yaml.safe_load(chaosblade_resource)
+
+        chaos_blade_name = chaos_blade['metadata']['name']
 
         # 删除 ChaosBlade 资源
         api_response = api_instance.delete_cluster_custom_object(

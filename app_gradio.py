@@ -42,7 +42,18 @@ def format_cover_html():
         <img src={image_src} />
     </div>
     <div class="bot_name">{"ChaosAgent"}</div>
-    <div class="bot_desp">{"基于AgentScope框架的混沌工程实验应用 Powered by AgentScope"}</div>
+    <div class="bot_desp">{"基于AgentScope框架的混沌工程实验应用"}</div>
+    <div class="bot_desp">
+        &nbsp;&nbsp; &nbsp;  {" -----------------  Powered by  --------------------- "}
+        <br>
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;   
+        <a href="https://modelscope.github.io/agentscope/zh_CN/index.html" target="_blank">AgentScope</a> 
+        <a href="https://dashscope.console.aliyun.com/overview" target="_blank">阿里云百炼</a>
+        <br>
+        <a href="https://cs.console.aliyun.com/#/k8s/cluster/list" target="_blank">阿里云ACK</a>
+        <a href="http://111.230.87.135:30003" target="_blank">阿里云Prometheus</a> 
+        <a href="https://grafana-cn-em93p0o1603.grafana.aliyuncs.com:443" target="_blank">阿里云Grafana</a>
+    </div> 
 </div>
 """
 
@@ -159,14 +170,17 @@ with demo:
                     with gr.Column(scale=3):
                         k8s_api_url = gr.Textbox(label="Kubernetes API 地址")
                     with gr.Column(scale=3):
-                        k8s_token = gr.Textbox(label="Kubernetes Token")
+                        k8s_token = gr.Textbox(label="Kubernetes Token", max_lines=1)
                     with gr.Column(scale=3):
                         prometheus_url = gr.Textbox(label="Prometheus 地址")
                 with gr.Row():
-                    with gr.Column(scale=1):
+                    try_it_button = gr.Button("Try it")
+                with gr.Row():
+                    with gr.Column(min_width=70,scale=1):
                         reset_button = gr.Button("Reset", variant='secondary', elem_classes=['red-button'])
-                    with gr.Column(scale=1):
+                    with gr.Column(min_width=70,scale=1):
                         confirm_button = gr.Button("确定")
+
             with gr.Accordion("Example Prompts", open=True):
                 prompt1 = gr.Button('帮我对default租户下的app应用进行一次Pod 重启的混沌实验')
                 prompt2 = gr.Button('帮我对default租户下的nginx应用进行一次Pod CPU飙升的混沌实验')
@@ -195,7 +209,21 @@ with demo:
         gr.Info("Kubernetes 和 Prometheus配置清理成功！")
         return state, '', '', ''
 
+    def fill_default_settings(state):
+        # 设定默认值
+        default_k8s_api_url = 'https://59.110.136.137:6443'
+        default_k8s_token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImhDQ1BYcjRRWlZpai1iazJYOGgyNjd0T3hCRDY0MUVmb1NVSnVsNENieUEifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiJlYjI3N2YyNi00NTkwLTQxYzUtODY4NC04NTY5NWZjZjc2MGUiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.fzEPumlYQyCV4-znu7jCl5ybAY50io3g3BPzF_Yhv_FHx_6CG-PqDzsfxFmw9SzWxwhwdYJb55mAjSNN9-ptXfTUUxGgCDYjnCVEcdsnTGf3Gziu3FneIw1EWnNSs5cnpPAdxe8dB0C778lBa_rYUKKilYEnLZguOYNFnZ55FzwzdvVoejS5AcTFf8btQAvyj-y89ejf088dwEf4XTY9RSbm6IPafoVL1-qUGCclddV1FMmz_GlQnpoopn52y--BI6Axl1s-eKp2BPr78rPdWodT-NcUZcfFgnIJagq-ilPMtuROOgB9Ek_lW291WvIr-qqODu24fECa5Euqs-z69g'  # 假设这里有一个默认的 token
+        default_prometheus_url = 'http://111.230.87.135:30003'
 
+        # 更新 state
+        state['k8s_api_url'] = default_k8s_api_url
+        state['k8s_token'] = default_k8s_token
+        state['prometheus_url'] = default_prometheus_url
+
+        # 也返回这些值以更新输入框
+        return state, default_k8s_api_url, default_k8s_token, default_prometheus_url
+
+    try_it_button.click(fill_default_settings, inputs=[state], outputs=[state, k8s_api_url, k8s_token, prometheus_url])
     confirm_button.click(save_settings, inputs=[k8s_api_url, k8s_token, prometheus_url, state], outputs=[state])
     reset_button.click(reset_settings, inputs=[state], outputs=[state, k8s_api_url, k8s_token, prometheus_url])
 

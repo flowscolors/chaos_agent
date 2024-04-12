@@ -5,7 +5,7 @@ from agentscope.message import Msg
 from typing import Optional
 from agentscope.prompt import PromptEngine, PromptType
 from ChaosPlan import ChaosPlan
-from tools import query_prometheus
+from tools import query_prometheus,delete_chaos_cr
 
 
 class PrometheusAgent(AgentBase):
@@ -37,7 +37,7 @@ class PrometheusAgent(AgentBase):
 
         # 添加10秒延迟
         print("等待10秒钟...")
-        time.sleep(70)
+        time.sleep(60)
         print("延迟结束,开始查询Prometheus")
 
         result = query_prometheus(chaos_plan.prometheus_url, chaos_plan.prometheus_query)
@@ -54,6 +54,8 @@ class PrometheusAgent(AgentBase):
 
         response = self.model(prompt).text
         print(response)
+
+        delete_chaos_cr(chaos_plan.k8s_api_url, chaos_plan.k8s_token, chaos_plan.chaosblade_resource)
 
         # 格式化输出LLM接口调用结果
         msg = Msg(self.name, response)
