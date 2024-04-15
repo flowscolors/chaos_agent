@@ -173,8 +173,8 @@ with demo:
                         k8s_token = gr.Textbox(label="Kubernetes Token", max_lines=1)
                     with gr.Column(scale=3):
                         prometheus_url = gr.Textbox(label="Prometheus 地址")
-                # with gr.Row():
-                #     try_it_button = gr.Button("Try it")
+                with gr.Row():
+                    try_it_button = gr.Button("Try it")
                 with gr.Row():
                     with gr.Column(min_width=70,scale=1):
                         reset_button = gr.Button("Reset", variant='secondary', elem_classes=['red-button'])
@@ -223,7 +223,7 @@ with demo:
         # 也返回这些值以更新输入框
         return state, default_k8s_api_url, default_k8s_token, default_prometheus_url
 
-    #try_it_button.click(fill_default_settings, inputs=[state], outputs=[state, k8s_api_url, k8s_token, prometheus_url])
+    try_it_button.click(fill_default_settings, inputs=[state], outputs=[state, k8s_api_url, k8s_token, prometheus_url])
     confirm_button.click(save_settings, inputs=[k8s_api_url, k8s_token, prometheus_url, state], outputs=[state])
     reset_button.click(reset_settings, inputs=[state], outputs=[state, k8s_api_url, k8s_token, prometheus_url])
 
