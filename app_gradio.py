@@ -71,8 +71,8 @@ def format_cover_html():
 model_configs = [
     {
         "model_type": "dashscope_chat",
-        "config_name": "qwen1.5-72b-chat",
-        "model_name": "qwen1.5-72b-chat",
+        "config_name": "qwen-max",
+        "model_name": "qwen-max",
         "api_key": os.environ.get("DASHSCOPE_API_KEY"),
         "generate_args": {
             "temperature": 0.5,
@@ -88,31 +88,31 @@ agentscope.init(model_configs=model_configs)
 commander_agent = DialogAgent(
         name="commander",
         sys_prompt="对现实工程中执行混沌实验需要多团队协作,现在你正在扮演混乱工程过程的协调者指挥官。你的任务是制定混沌实验计划,协调其他团队成员(ChaosMonkey、Observer、Analyzer)的工作,确保实验顺利进行。你可以利用提供的Kubernetes集群信息和Prometheus监控信息,对实验过程进行监督和调整。现在,请根据用户的输入,给出下一步的实验计划和指令。",
-        model_config_name="qwen1.5-72b-chat",  # replace by your model config name
+        model_config_name="qwen-max",  # replace by your model config name
     )
 
 monkey_agent = KubernetesAgent(
         name="ChaosMonkey",
         sys_prompt="对现实工程中执行混沌实验需要多团队协作,现在你正在扮演向Kubernetes集群注入故障的注入者ChaosMonkey。你的任务是根据指挥官制定的实验计划,使用提供的Kubernetes集群信息,通过创建ChaosBladeOperator的自定义资源(CR)来模拟各种故障场景,比如Pod故障、网络延迟、资源占用等。在故障注入后,请向Observer和Analyzer报告注入的故障类型和影响范围。现在,请根据指挥官的指令,执行故障注入操作。",
-        model_config_name="qwen1.5-72b-chat",  # replace by your model config name
+        model_config_name="qwen-max",  # replace by your model config name
     )
 
 observer_agent = PrometheusAgent(
         name="observer",
         sys_prompt="对现实工程中执行混沌实验需要多团队协作,现在你正在扮演监视Kubernetes集群的观察者。你的任务是利用提供的Prometheus监控信息,实时查询和分析集群的各项指标,包括Pod状态、资源使用情况、网络性能等。当发现异常情况时,请立即向Analyzer报告,并提供相关的监控数据和图表。同时,请随时向指挥官汇报集群的整体运行状态。现在,请根据指挥官的要求,开始监视集群。",
-        model_config_name="qwen1.5-72b-chat",  # replace by your model config name
+        model_config_name="qwen-max",  # replace by your model config name
     )
 
 analyzer_agent = DialogAgent(
         name="analyzer",
         sys_prompt="对现实工程中执行混沌实验需要多团队协作,现在你正在扮演分析故障注入和监控情况的分析者。你的任务是综合ChaosMonkey报告的故障注入情况和Observer提供的监控数据,分析故障对系统的影响,评估系统的稳定性和恢复能力。你需要识别潜在的风险和改进点,并向指挥官提出优化建议。同时,请与Summarizer协作,总结实验过程和结果。现在,请根据当前的故障注入和监控情况,开始进行分析。",
-        model_config_name="qwen1.5-72b-chat",  # replace by your model config name
+        model_config_name="qwen-max",  # replace by your model config name
     )
 
 summarizer_agent = DialogAgent(
         name="summarizer",
         sys_prompt="对现实工程中执行混沌实验需要多团队协作,现在你正在扮演对混沌工程实验过程进行总结汇报的总结者。你的任务是在实验完成后,与Analyzer协作,汇总实验过程中的关键事件、监控数据、分析结果和优化建议,形成一份完整的混沌实验报告。报告需要包括实验目的、实验场景、故障注入和影响范围、系统响应和恢复情况、识别出的风险和改进措施等内容。现在,请根据Analyzer提供的信息,开始撰写实验总结报告。",
-        model_config_name="qwen1.5-72b-chat",  # replace by your model config name
+        model_config_name="qwen-max",  # replace by your model config name
     )
 
 
