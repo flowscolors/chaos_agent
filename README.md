@@ -19,7 +19,3 @@ models: #关联模型
 #   entry_file: app.py
 license: Apache License 2.0
 ---
-#### Clone with HTTP
-```bash
- git clone https://www.modelscope.cn/studios/flowscolors/chaos_agent.git
-```
