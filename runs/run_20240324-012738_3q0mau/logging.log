@@ -1,0 +1,41 @@
+2024-03-24 01:27:39.856 | INFO     | agentscope.models:read_model_configs:171 - Load configs for model wrapper: qwen1.5-72b-chat
+2024-03-24 01:27:39.869 | INFO     | agentscope.utils.monitor:_create_monitor_table:341 - Init [monitor_metrics] as the monitor table
+2024-03-24 01:27:39.869 | INFO     | agentscope.utils.monitor:_create_monitor_table:342 - Init [monitor_metrics_quota_exceeded] as the monitor trigger
+2024-03-24 01:27:39.870 | INFO     | agentscope.utils.monitor:__init__:311 - SqliteMonitor initialization completed at [./runs\run_20240324-012738_3q0mau\agentscope.db]
+2024-03-24 01:27:39.871 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:27:39.874 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.call_counter] to SqliteMonitor with unit [times] and quota [None]
+2024-03-24 01:27:39.882 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.prompt_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-24 01:27:39.890 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.completion_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-24 01:27:39.898 | INFO     | agentscope.utils.monitor:register:362 - Register metric [qwen1.5-72b-chat.total_tokens] to SqliteMonitor with unit [token] and quota [None]
+2024-03-24 01:27:39.905 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:27:39.906 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:27:39.907 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+2024-03-24 01:27:39.909 | INFO     | agentscope.models.model:__init__:256 - Initialize model [qwen1.5-72b-chat]
+commander: 故障类型: Pod-CPU-Load
+租户名称: default
+应用名称: nginx
+Node名称: null (由于这个实验只针对Pod，不需要特定Node)
+chaoslade_cr: 
+```yaml
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: nginx-cpu-load-experiment
+spec:
+  experiments:
+  - name: pod-cpu-load
+    desc: "A chaos experiment to inject high cpu load on nginx pod"
+    actions:
+    - name: cpu-load
+      args:
+        cpu: "500m" # 指定CPU负载量
+    targets:
+    - kind: Pod
+      selector:
+        matchLabels:
+          app: nginx
+```
+prometheus_query: 
+```sql
+container_cpu_usage_seconds_total{namespace="default",pod_name=~"nginx.*"}  # 查询nginx Pod的CPU使用情况
+```
